@@ -1,0 +1,74 @@
+
+.sidebar {
+    // styling the sidebar
+    background-color: #fff;
+    // flex property to define width, grow 0, shrink 0
+    flex: 0 0 18%;
+    // to create alot of space in the container for legal text
+    border-radius: 1.3rem;
+}
+
+.side-nav {
+    // adding font size
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+   &__item {
+       // parent element set to relative to element the hover effect
+       position: relative;
+       cursor: pointer;
+       margin-left: 1rem;
+
+       // to create space btn the items
+       &:not(:last-child) {
+           margin-bottom: .5rem;
+       }
+   }
+
+   // this shd be visible only when we hover the item
+   &__item:hover::before,
+   // to make one of the li items initially highlighted
+   &__item--active::before {
+       width: 100%;
+   }
+
+   // to show the item as selected
+   &__item:active::before {
+       background-color: #fff;
+   }
+
+
+   &__link:link, 
+   &__link:visited {
+    //    color: var(--color-grey-light-1);
+       text-decoration: none;
+       text-transform: uppercase;
+       display: inline-block;
+       padding: 1.5rem 3rem;
+       // z-index only works with positioning
+       position: relative;
+       z-index: 10;
+       // to align items in straight line
+       display: flex;
+       align-items: center;
+   }
+
+   &__icon {
+       // reduce size of icons
+       width: 1.75rem;
+       height: 1.75rem;
+       margin-right: 2rem;
+       // current color is the color of the current element
+       fill:currentColor;
+   }
+}
+.sidebar-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // height: 90rem;
+}
+.title {
+    padding: 1rem 2rem 2rem 3.5rem;
+}
