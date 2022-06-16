@@ -5,8 +5,6 @@ import { FaMapMarkedAlt } from 'react-icons/fa'
 import { BiSupport } from 'react-icons/bi'
 import { HiOutlineDocumentReport } from 'react-icons/hi'
 import { AiFillSetting } from 'react-icons/ai'
-import { FiLogOut } from 'react-icons/fi'
-import { AiOutlineCloudDownload } from 'react-icons/ai'
 
 import './sidebar.scss'
 
@@ -16,8 +14,8 @@ export default function sidebar() {
     <nav className="sidebar">
         <h2 className='title'>Covid Tracker</h2>
         <div className='sidebar-flex'>
-            <div>
-            <ul className="side-nav">
+            <div></div>
+        <ul className="side-nav">
             <li className="side-nav__item side-nav__item--active">
                 <span className='side-nav__icon'><MdOutlineDashboard /></span>
                     <span>Dashboard</span>
@@ -68,31 +66,8 @@ export default function sidebar() {
                 {/* </a> */}
             </li>
         </ul>
-            </div>
-            <div>
-                <ul className="side-nav logout">
-                <li className="side-nav__item">
-                <span className="side-nav__icon">
-                        <FiLogOut />
-                    </span>
-                <span>Logout</span>
-            </li>
-                </ul>
-
-            </div>
-
-        <div className="download">
-            <div className='download__container'>
-                <div className='download__mainIcon'>
-                <span className="download__icon">
-                <AiOutlineCloudDownload />
-            </span>
-                </div>
-            <h2 className='title__download'>Download Report</h2>
-                <p className='text'>Do you want to export all your data as a backup file</p>
-            <button className='btn'>Download</button>
-            </div>
-
+        <div className="legal">
+            Legal @ 2022 
         </div>
         </div>
     </nav>

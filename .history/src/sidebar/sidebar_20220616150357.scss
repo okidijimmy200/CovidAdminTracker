@@ -80,11 +80,12 @@
 .download {
     border-radius: .9rem;
     background-color: #F9F5F4;
+    height: 18rem;
     margin: 0 1rem;
 
     &__container {
         text-align: center;
-        margin: 1rem 4rem;
+        margin: 2rem 4rem;
     }
 
     &__icon {
@@ -94,7 +95,7 @@
     }
 
     &__mainIcon {
-        font-size: 3.4rem;
+        
     }
 }
 .title__download {

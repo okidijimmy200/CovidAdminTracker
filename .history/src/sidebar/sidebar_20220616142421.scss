@@ -80,21 +80,12 @@
 .download {
     border-radius: .9rem;
     background-color: #F9F5F4;
+    height: 18rem;
     margin: 0 1rem;
 
     &__container {
         text-align: center;
-        margin: 1rem 4rem;
-    }
-
-    &__icon {
-        width: 1.75rem;
-        height: 1.75rem;
-        fill: currentColor;
-    }
-
-    &__mainIcon {
-        font-size: 3.4rem;
+        margin: 2rem 4rem;
     }
 }
 .title__download {
@@ -111,9 +102,6 @@
 
 .btn {
     cursor: pointer;
-    margin-top: .8rem;
-    border-radius: 1.5rem;
-    padding: 1rem;
-    border-style: none;
-    background-color:  var(--color-primary-light);;
+    margin-top: 2rem;
+    border-radius: .;
 }

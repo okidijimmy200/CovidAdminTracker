@@ -82,17 +82,11 @@ export default function sidebar() {
             </div>
 
         <div className="download">
-            <div className='download__container'>
-                <div className='download__mainIcon'>
-                <span className="download__icon">
+            <span className="side-nav__icon">
                 <AiOutlineCloudDownload />
+                <h3>Download Report</h3>
+                <h4>Do you want to export all your data as a backup filr</h4>
             </span>
-                </div>
-            <h2 className='title__download'>Download Report</h2>
-                <p className='text'>Do you want to export all your data as a backup file</p>
-            <button className='btn'>Download</button>
-            </div>
-
         </div>
         </div>
     </nav>

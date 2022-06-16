@@ -83,7 +83,7 @@ export default function sidebar() {
 
         <div className="download">
             <div className='download__container'>
-                <div className='download__mainIcon'>
+                <div className='download_'>
                 <span className="download__icon">
                 <AiOutlineCloudDownload />
             </span>

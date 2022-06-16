@@ -6,7 +6,6 @@ import { BiSupport } from 'react-icons/bi'
 import { HiOutlineDocumentReport } from 'react-icons/hi'
 import { AiFillSetting } from 'react-icons/ai'
 import { FiLogOut } from 'react-icons/fi'
-import { AiOutlineCloudDownload } from 'react-icons/ai'
 
 import './sidebar.scss'
 
@@ -70,9 +69,10 @@ export default function sidebar() {
         </ul>
             </div>
             <div>
-                <ul className="side-nav logout">
+                <ul className="side-nav">
                 <li className="side-nav__item">
                 <span className="side-nav__icon">
+                        {/* <use xlink:href="img/sprite.svg#icon-map"></use> */}
                         <FiLogOut />
                     </span>
                 <span>Logout</span>
@@ -82,17 +82,7 @@ export default function sidebar() {
             </div>
 
         <div className="download">
-            <div className='download__container'>
-                <div className='download__mainIcon'>
-                <span className="download__icon">
-                <AiOutlineCloudDownload />
-            </span>
-                </div>
-            <h2 className='title__download'>Download Report</h2>
-                <p className='text'>Do you want to export all your data as a backup file</p>
-            <button className='btn'>Download</button>
-            </div>
-
+            Legal @ 2022 
         </div>
         </div>
     </nav>

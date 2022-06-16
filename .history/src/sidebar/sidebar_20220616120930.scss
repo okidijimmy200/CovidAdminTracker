@@ -14,7 +14,6 @@
     list-style: none;
     margin-top: 3.5rem;
 
-
    &__item {
        // parent element set to relative to element the hover effect
        position: relative;
@@ -65,8 +64,7 @@
    }
 }
 .logout {
-    margin-top: 2.2rem;
-    margin-bottom: 1.6rem;
+    margin-top: 10rem;
 }
 .sidebar-flex {
     display: flex;
@@ -78,42 +76,5 @@
 }
 
 .download {
-    border-radius: .9rem;
-    background-color: #F9F5F4;
-    margin: 0 1rem;
-
-    &__container {
-        text-align: center;
-        margin: 1rem 4rem;
-    }
-
-    &__icon {
-        width: 1.75rem;
-        height: 1.75rem;
-        fill: currentColor;
-    }
-
-    &__mainIcon {
-        font-size: 3.4rem;
-    }
-}
-.title__download {
-    font-size: 1.2rem;
-    font-weight:bolder;
-    letter-spacing: .2px;
-    margin-bottom: .8rem;
-}
-
-.text {
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-.btn {
-    cursor: pointer;
-    margin-top: .8rem;
-    border-radius: 1.5rem;
-    padding: 1rem;
-    border-style: none;
-    background-color:  var(--color-primary-light);;
+    padding: ;
 }
