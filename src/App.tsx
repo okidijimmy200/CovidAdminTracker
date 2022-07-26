@@ -1,17 +1,19 @@
-import React from 'react';
-import Sidebar from './sidebar/sidebar';
+import { Provider } from 'react-redux'
+import {store} from './state/index'
 import Content from './core/content';
 import './App.scss';
 
 function App() {
   return (
-    <div data-testid='container' className="container">
+    <Provider store={store}>
+          <div data-testid='container' className="container">
       <div className="content">
-      <Sidebar />
       <Content />
       </div>
       
     </div>
+     </Provider>
+
   );
 }
 

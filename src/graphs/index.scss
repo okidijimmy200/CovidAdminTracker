@@ -1,33 +1,72 @@
-.main {
-    margin-top: 2rem;
-    height: 57rem;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 40px);
+    column-gap: 22px;
+    row-gap: 10px;
+  }
+.graphCards {
+    grid-column-start: 3;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 4;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-gap: 2rem;
-    color: white;
-}
-.box {
-    background-color:  #fff;
-}
-.livereport {
-    background-color:  #fff;
-    grid-column: 1 / 4;
-    grid-row: 2 / 5;
+    column-gap: 22px;
 }
 
-.recoveryoverview {
-    background-color:  #fff;
-    grid-column: 1 /4;
-    grid-row: 5 / -1;
+.liveReport {
+    grid-column-start: 3;
+    grid-column-end:8;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    background-color: green;
 }
 
-.totalcases {
-    background-color:  #fff;
-    grid-row: 2 / 4;
+.totalCases {
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    box-shadow: 0 1.5rem 4rem rgba(#000, .15);
 }
 
-.liveupdate {
-    background-color:  #fff;
-    grid-row: 4 / -1;
+.recoveryOverview {
+    grid-column-start: 3;
+    grid-column-end:8;
+    grid-row-start: 8;
+    grid-row-end: 12;
+    background-color: red;
+}
+
+.liveUpdate {
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 7;
+    grid-row-end: 12;
+    background-color: brown;
+}
+
+.sidebar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 12;
+}
+
+.navBar {
+    grid-column-start: 3;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 1.4rem;
+    background-color: #fff;
+    border-bottom:1px solid var(--color-grey-light-2);
+
+    // placing the header wch is parent to flex to put them side by side
+    display: flex;
+    // placing the elements within the nav
+    justify-content: space-between;
+    // to align elements to the cross axis
+    align-items: center;
 }

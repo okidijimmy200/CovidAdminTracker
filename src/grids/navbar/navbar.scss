@@ -1,0 +1,151 @@
+.header{
+    // font size for the header section
+    font-size: 1.4rem;
+    background-color: #fff;
+    border-bottom:1px solid var(--color-grey-light-2);
+
+    // placing the header wch is parent to flex to put them side by side
+    display: flex;
+    // placing the elements within the nav
+    justify-content: space-between;
+    // to align elements to the cross axis
+    align-items: center;
+}
+
+////////////////////////////////////////////
+////////////////SEARCH
+.search {
+    // give width using flex
+    flex:0 0 50%;
+
+    // making search a parent flex
+    display: flex;
+    // centering content along cross axis
+    align-items: center;
+    // centering content along main axis
+    justify-content: center;
+    &__input {
+        // inheriting font family default for input
+        font-family: inherit;
+        font-size: inherit;
+        background-color: var(--color-grey-light-2);
+        // remove border
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 1rem;
+        width: 90%;
+        // implementing the animation
+        transition: all .2s;
+        // to make search btn be on top of input
+        margin-right: -3.25rem;
+
+        // when we focus on the element
+        &:focus {
+            outline: none;
+            // set the width to 100%
+            width: 100%;
+            // increasing the darkness
+            background-color: var(--color-grey-light-3);
+        }
+
+        // changing the font size of input
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+
+
+    // to make the button same color when we click the input
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__button {
+        // styling the search button
+        border: none;
+        // to make it have the same background color as the input
+        background-color:  var(--color-grey-light-2);
+
+        // remove the focus from btn
+        &:focus {
+            outline: none;
+        }
+
+        // when we click the btn, we want it to move down
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+    &__icon {
+        // searh icon formatting
+        height: 2rem;
+        width: 2rem;
+        // changing the background color of SVG icon
+        fill: var(--color-grey-dark-3);
+    }
+}
+
+////////////////////////////////////////////
+////////////////USER NAVIGATION
+.user-nav {
+
+    // we use align self to make hover available through out the entire hover section
+    align-self: stretch;
+   // flex item can also be a flex container
+   display: flex;
+   align-items: center;
+  
+  
+
+   // selecting all the direct children
+   & > * {
+       padding: 0 2rem;
+       cursor: pointer;
+       height: 100%;
+       // to place the icons in the middle of box
+       display: flex;
+       align-items: center;
+   }
+
+   // taking care of hover on child
+   & > *:hover {
+       background-color: var(--color-grey-light-3);
+   }
+   &__icon-box {
+       position: relative;
+   }
+   &__icon {
+       height: 2.25rem;
+       width: 2.25rem;
+       // color of icon
+       fill: var(--color-grey-dark-2);
+      
+   }
+   &__notification {
+       // working on notification
+       font-size: .8rem;
+       height: 1.75rem;
+       width: 1.75rem;
+       border-radius: 50%;
+       background-color: var(--color-primary);
+       color: #fff;
+       // positioning the element
+       position: absolute;
+       top: 1.2rem;
+       right: 1.1rem;
+
+       // centering the text in the middle of circle
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   &__user-photo {
+       height: 3.75rem;
+       border-radius: 50%;
+       margin-right: 1rem;
+
+   }
+}
+

@@ -1,0 +1,24 @@
+.box {
+
+    &__1{
+        // grid-column-start: 1;
+        // grid-column-end: 3;
+        background-color:  orangered;
+    }
+
+    &__2{
+        // grid-column-start: 3;
+        // grid-column-end: 6;
+        background-color:  orangered;
+    }
+    &__3{
+        // grid-column-start: 6;
+        // grid-column-end: 9;
+        background-color:  orangered;
+    }
+    &__4{
+        // grid-column-start: 9;
+        // grid-column-end: 11;
+        background-color:  orangered;
+    }
+}

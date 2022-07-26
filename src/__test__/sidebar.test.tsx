@@ -1,7 +1,7 @@
 import React from "react";
 import { render} from '@testing-library/react'
 import "@testing-library/jest-dom/extend-expect";
-import Sidebar from '../sidebar/sidebar'
+import Sidebar from '../grids/sidebar/sidebar'
 
 
 describe('Test Sidebar', () => {
