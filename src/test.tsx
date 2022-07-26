@@ -1,6 +1,6 @@
 import React, {useEffect}  from 'react'
-import { useTypedSelector } from '../../hooks/useTypeSelector';
-import { useActions } from '../../hooks/useActions';
+import { useTypedSelector } from './hooks/useTypeSelector';
+import { useActions } from './hooks/useActions';
 import { VictoryPie, VictoryLabel} from "victory"
 
 
@@ -20,16 +20,6 @@ export const TotalCases = () => {
     },[])
   return (
     <>
-    <div className='totalcases_main'>
-    <div className='totalcases_title'>
-      <div><h3>Total Cases</h3></div>
-        <div>
-    <ul className='totalcases_list'>
-        <li><span>Deaths</span></li>
-        <li><span>Confirmed</span></li>
-    </ul>
-  </div>
-    </div>
 <div className='totalcases_sub'>
 <svg width={150} height={150}>
   <circle cx={90} cy={90} r={20} fill="#c43a31"/>
@@ -42,7 +32,6 @@ export const TotalCases = () => {
     colorScale={["#c43a31", "#ffcff1" ]}
     width={180} height={180}
     innerRadius={50}
-    padding={55}
   />
      <VictoryLabel
           textAnchor="middle"
@@ -51,9 +40,6 @@ export const TotalCases = () => {
           text={percent + '%'}/>
 </svg>
 </div>
-
-    </div>
-    
     
     </>
   )

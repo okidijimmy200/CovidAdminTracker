@@ -1,7 +1,35 @@
-.totalcases_sub {
-    width: 200px;
-    margin: auto;
-    height: auto;
-    padding: 0rem !important;
-    
+.totalcases {
+    &_main{
+        display: flex;
+    }
+    &_sub {
+        // width: 200px;
+        margin: -3rem 0 1rem 0;
+        height: auto;
+        
+    }
+
+    &_title{
+        padding: .1rem;
+        flex: 0 0 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       }
+
+    &_list {
+        list-style: none;
+        display: flex;
+        justify-content:space-around;
+
+        li::before {
+                content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                color: red; /* Change the color */
+                font-size:20px;
+                font-weight: bold; /* If you want it to be bold */
+                display: inline-block; /* Needed to add space between the bullet and the text */
+                margin-right: 5px;
+                margin-bottom: 5px;
+              }
+    }
 }
