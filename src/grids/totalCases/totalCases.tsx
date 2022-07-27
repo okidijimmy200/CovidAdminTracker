@@ -9,7 +9,7 @@ import './totalCases.scss'
 export const TotalCases = () => { 
   const {ListTotalCases } = useActions();
   const {data} = useTypedSelector((state) => state.totalCases)
-  console.log(data)
+  // console.log(data)
   const results: any = data
 
   const percent = ((results.deaths / results.cases) * 100).toFixed(1)

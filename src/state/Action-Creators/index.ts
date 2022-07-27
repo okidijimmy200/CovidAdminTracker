@@ -21,3 +21,22 @@ export const ListTotalCases = () => async(dispatch: Dispatch<Action>) => {
             })
         }
 }
+
+export const ListByCountries = () => async(dispatch: Dispatch<Action>) => {
+    try {
+        dispatch({ type: ActionType.LIST_BY_COUNTRIES})
+
+        const { data } = await axios.get('https://disease.sh/v3/covid-19/countries')
+
+        dispatch({
+            type: ActionType.LIST_BY_COUNTRIES_SUCCESS,
+            payload: data
+        })
+    }
+    catch(err: any) {
+        dispatch({
+            type: ActionType.LIST_BY_COUNTRIES_ERROR,
+            payload: err.message,
+        })
+    }
+}
