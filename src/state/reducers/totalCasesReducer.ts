@@ -13,6 +13,12 @@ interface ListCountries {
     data: string[]
 }
 
+interface ListGeoCountries {
+    loading?: boolean;
+    error?: string | null;
+    result: string[]
+}
+
 const initialState = {
     loading: false,
     error: null,
@@ -45,7 +51,23 @@ const totalCountriesReducer = (state: ListCountries=initialState, action: Action
     }
 }
 
+const GeoCountriesReducer = (state: ListGeoCountries={loading: false,
+    error: null,
+    result: [],}, action: Action): ListGeoCountries => {
+    switch(action.type){
+        case ActionType.LIST_GEO_COUNTRIES:
+            return { loading: true, error: null, result: [] }
+        case ActionType.LIST_GEO_COUNTRIES_SUCCESS:
+            return { loading: false, error: null, result: action.payload }
+        case ActionType.LIST_GEO_COUNTRIES_ERROR:
+            return { loading: false, error: action.payload, result: [] }
+        default:
+            return state
+    }
+}
+
 export  {
     totalCasesReducer,
-    totalCountriesReducer
+    totalCountriesReducer,
+    GeoCountriesReducer
 }

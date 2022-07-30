@@ -40,3 +40,23 @@ export const ListByCountries = () => async(dispatch: Dispatch<Action>) => {
         })
     }
 }
+
+export const ListGeoCountries = () => async(dispatch: Dispatch<Action>) => {
+    try {
+        dispatch({ type: ActionType.LIST_GEO_COUNTRIES})
+
+        const { data } = await axios.get('https://s3.amazonaws.com/rawstore.datahub.io/23f420f929e0e09c39d916b8aaa166fb.geojson')
+
+        const results = data
+        dispatch({
+            type: ActionType.LIST_GEO_COUNTRIES_SUCCESS,
+            payload: results
+        })
+    }
+    catch(err: any) {
+        dispatch({
+            type: ActionType.LIST_GEO_COUNTRIES_ERROR,
+            payload: err.message,
+        })
+    }
+}

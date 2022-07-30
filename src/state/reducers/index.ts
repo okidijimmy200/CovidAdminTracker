@@ -1,9 +1,10 @@
 import {combineReducers} from 'redux'
-import {totalCasesReducer, totalCountriesReducer } from './totalCasesReducer';
+import {totalCasesReducer, totalCountriesReducer, GeoCountriesReducer } from './totalCasesReducer';
 
 const reducers = combineReducers({
     totalCases: totalCasesReducer,
-    totalCountries: totalCountriesReducer
+    totalCountries: totalCountriesReducer,
+    GeoCountries:GeoCountriesReducer
 });
 
 export default reducers;

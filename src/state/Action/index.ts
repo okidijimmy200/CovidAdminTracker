@@ -27,6 +27,20 @@ interface LIST_BY_COUNTRIES_ERRORAction {
     type: ActionType.LIST_BY_COUNTRIES_ERROR,
     payload: string
 }
+
+interface LIST_GEO_COUNTRIESAction {
+    type: ActionType.LIST_GEO_COUNTRIES
+}
+
+interface LIST_GEO_COUNTRIES_SUCCESSAction {
+    type: ActionType.LIST_GEO_COUNTRIES_SUCCESS,
+    payload: string[]
+}
+
+interface LIST_GEO_COUNTRIES_ERRORAction {
+    type: ActionType.LIST_GEO_COUNTRIES_ERROR,
+    payload: string
+}
 export type Action =
     | ListTotalCasesAction
     | ListTotalCasesSuccessAction
@@ -34,3 +48,6 @@ export type Action =
     | LIST_BY_COUNTRIESAction
     | LIST_BY_COUNTRIES_SUCCESSAction
     | LIST_BY_COUNTRIES_ERRORAction
+    | LIST_GEO_COUNTRIESAction
+    | LIST_GEO_COUNTRIES_SUCCESSAction
+    | LIST_GEO_COUNTRIES_ERRORAction

@@ -8,9 +8,11 @@ export const LiveUpdate = () => {
   const {data} = useTypedSelector((state) => state.totalCountries)
 
   const results: any = data
+
+
   let sortedInput = results.slice().sort((a: any, b: any) => b.cases - a.cases);
   const items = sortedInput.slice(0, 7)
-  console.log(items)
+  
   useEffect(() => {
     ListByCountries()
     // eslint-disable-next-line 
